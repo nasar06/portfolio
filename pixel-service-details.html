@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - meta marketing</title>
+  <title>Service Details - Pixel Setup</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -84,12 +84,11 @@
             <div class="service-box">
               <h4>Serices List</h4>
               <div class="services-list">
-                <a href="#" onclick="toggleElement('list-0'); return false;"><i
-                    class="bi bi-arrow-right-circle"></i><span>Audience Research & Targeting</span></a>
-                <a href="#" onclick="toggleElement('list-1'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Ad content creation</span></a>
-                <a href="#" onclick="toggleElement('list-2'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Retargeting Campaigns</span></a>
-                <a href="#" onclick="toggleElement('list-3'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Budget Optimization</span></a>
-                <a href="#" onclick="toggleElement('list-4'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Weekly Reporting</span></a>
+                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Google Tag Manager</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Facebook Conversion API</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>GA4 Server Side Tracking</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Ad tracking pixel audit</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Custom Events Track</span></a>
               </div>
             </div><!-- End Services List -->
 
@@ -112,46 +111,51 @@
 
           </div>
 
-          <div class="col-lg-8 ps-lg-5 service-details" data-aos="fade-up" data-aos-delay="200" id="list-0>
-            
-            <h3 class="align-items-center justify-content-center">Are you wasting your time, energy, & money showing
-              your Facebook ads to the wrong people? </h3>
-            <h4 class="mt-5">How Meta Marketing Can Transform and Grow Your Business?</h4>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Reach the right people for your product/service</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Increase click-through rates, ad relevance scores, &
-                  ROAS</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Find profitable interests, demographics, and behaviors</span>
-              </li>
-              <li><i class="bi bi-check-circle"></i> <span>Save time, energy, & ad spend</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Understand key insights into your target audience</span></li>
-            </ul>
-            <p>
-          </div>
+          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/services/pixel-service.jpg" alt="" class="img-fluid services-img">
+            <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-8 ps-lg-5 service-details" data-aos="fade-up" data-aos-delay="200" id="list-1" >
-            <h3 class="align-items-center justify-content-center">What will I provide if YOU order this meta marketing?
-            </h3>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>High-affinity interests for targeting (10, 15, or 20)</span>
-              </li>
-              <li><i class="bi bi-check-circle"></i> <span>Easy to use, hyper-targeted audiences (1, 2, or 3)</span>
-              </li>
-              <li><i class="bi bi-check-circle"></i> <span>Buyer demographics, behaviors, & online activity
-                  (Standard/Premium only)</span>
-              </li>
-              <li><i class="bi bi-check-circle"></i> <span>Ad funnel campaign ideas + basic strategy (Premium
-                  only)</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Breakdown of key insights + tools for how to use them</span>
-              </li>
-            </ul>
-            <p>
-          </div>
+              <!-- Default Image / Banner -->
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img mb-4">
 
+              <!-- Service Details -->
+              <div class="service-details">
+                <h3>Google Tag Manager</h3>
+                <p>
+                  We provide complete Google Tag Manager setup for seamless event tracking,
+                  conversion optimization, and integration with GA4, Facebook Pixel, and other tools.
+                  Easily manage tags without editing your site’s code.
+                </p>
+
+                <h5>Key Features:</h5>
+                <ul>
+                  <li>Full GTM setup & configuration</li>
+                  <li>Event & conversion tracking</li>
+                  <li>GA4 & Facebook Pixel integration</li>
+                  <li>Debugging & testing support</li>
+                </ul>
+
+                <h5>Why Choose This Service?</h5>
+                <p>
+                  Accurate tracking, faster implementation, and improved ROI through data-driven decisions.
+                </p>
+
+                <!-- Call To Action -->
+                <a href="#contact" class="btn btn-primary mt-3">Get Started</a>
+              </div>
+
+            </div>
+
+
+
+          </div>
 
         </div>
 
+
+
       </div>
+
 
     </section><!-- /Service Details Section -->
 
@@ -209,23 +213,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    function toggleElement(id) {
-      var el = document.getElementById(id);
-      // Hide all elements with class 'service-details'
-      var elements = document.querySelectorAll('.service-details');
-      elements.forEach(function (element) {
-        if (element.id !== id) {
-          element.style.display = 'none';
-        }
-      });
-      if (el) {
-        el.style.display = 'block';
-      }
-      
-    }
-  </script>
 
 </body>
 
