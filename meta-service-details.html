@@ -84,8 +84,7 @@
             <div class="service-box">
               <h4>Serices List</h4>
               <div class="services-list">
-                <a href="#" onclick="toggleElement('list-1'); return false;"><i
-                    class="bi bi-arrow-right-circle"></i><span>Audience Research & Targeting</span></a>
+                <a href="#" onclick="toggleElement('list-1'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Audience Research & Targeting</span></a>
                 <a href="#" onclick="toggleElement('list-2'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Ad content creation</span></a>
                 <a href="#" onclick="toggleElement('list-3'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Retargeting Campaigns</span></a>
                 <a href="#" onclick="toggleElement('list-4'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Budget Optimization</span></a>
@@ -131,6 +130,25 @@
 
           <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="list-1" >
             <h3 class="align-items-center justify-content-center">What will I provide if YOU order this meta marketing?
+            </h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>High-affinity interests for targeting (10, 15, or 20)</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Easy to use, hyper-targeted audiences (1, 2, or 3)</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Buyer demographics, behaviors, & online activity
+                  (Standard/Premium only)</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Ad funnel campaign ideas + basic strategy (Premium
+                  only)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Breakdown of key insights + tools for how to use them</span>
+              </li>
+            </ul>
+            <p>
+          </div>
+          
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="list-2" >
+            <h3 class="align-items-center justify-content-center">Ad content creation
             </h3>
             <ul>
               <li><i class="bi bi-check-circle"></i> <span>High-affinity interests for targeting (10, 15, or 20)</span>
@@ -211,22 +229,58 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    function toggleElement(id) {
-      var el = document.getElementById(id);
-      // Hide all elements with class 'single-service-details'
+    // Hide all .single-service-details except #list-0 on page load
+    window.addEventListener('DOMContentLoaded', function() {
       var elements = document.querySelectorAll('.single-service-details');
-      elements.forEach(function (element) {
-        if (element.id !== id) {
+      elements.forEach(function(element) {
+        if (element.id === 'list-0') {
+          element.style.display = 'block';
+        } else {
           element.style.display = 'none';
         }
       });
-      if (el) {
-        el.style.display = 'block';
+
+      // No initial active background for the first service link
+      var serviceLinks = document.querySelectorAll('.services-list a');
+      serviceLinks.forEach(function(link) {
+        link.style.backgroundColor = '';
+        link.style.color = '';
+        var icon = link.querySelector('.bi-arrow-right-circle');
+        if (icon) icon.style.color = '';
+      });
+    });
+
+    function toggleElement(id) {
+      var elements = document.querySelectorAll('.single-service-details');
+      elements.forEach(function(element) {
+        if (element.id === id) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+
+      // Remove bg color and icon color from all service links
+      var serviceLinks = document.querySelectorAll('.services-list a');
+      serviceLinks.forEach(function(link) {
+        link.style.backgroundColor = '';
+        link.style.color = '';
+        var icon = link.querySelector('.bi-arrow-right-circle');
+        if (icon) icon.style.color = '';
+      });
+
+      // Set bg color and icon color for the clicked link
+      var idMap = ['list-1', 'list-2', 'list-3', 'list-4', 'list-5'];
+      var idx = idMap.indexOf(id);
+      if (idx !== -1 && serviceLinks[idx]) {
+        serviceLinks[idx].style.backgroundColor = '#0563bb';
+        serviceLinks[idx].style.color = '#fff';
+        var icon = serviceLinks[idx].querySelector('.bi-arrow-right-circle');
+        if (icon) icon.style.color = '#fff';
       }
-      
     }
   </script>
-
+    
 </body>
 
 </html>
