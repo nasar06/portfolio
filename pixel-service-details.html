@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Pixel Setup</title>
+  <title>Pixel Setup</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -65,10 +65,10 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
+            <li class="current"><a href="pixel-service-details.html">Service Details</a></li>
           </ol>
         </nav>
-        <h1>Service Details</h1>
+        <h1><a href="meta-service-details.html" style="color: #000000;">Pixel Service Details</a></h1>
       </div>
     </div><!-- End Page Title -->
 
@@ -84,18 +84,22 @@
             <div class="service-box">
               <h4>Serices List</h4>
               <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Google Tag Manager</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Facebook Conversion API</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>GA4 Server Side Tracking</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Ad tracking pixel audit</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Custom Events Track</span></a>
+                <a href="#" onclick="toggleElement('pixel-1'); return false;"><i
+                    class="bi bi-arrow-right-circle"></i><span>Full GTM setup & configuration</span></a>
+                <a href="#" onclick="toggleElement('pixel-2'); return false;"><i
+                    class="bi bi-arrow-right-circle"></i><span>Event & conversion tracking</span></a>
+                <a href="#" onclick="toggleElement('pixel-3'); return false;"><i
+                    class="bi bi-arrow-right-circle"></i><span>GA4 & Facebook Pixel integration</span></a>
+                <a href="#" onclick="toggleElement('pixel-4'); return false;"><i
+                    class="bi bi-arrow-right-circle"></i><span>Debugging & testing support</span></a>
               </div>
             </div><!-- End Services List -->
 
             <div class="service-box">
               <h4>Download Catalog</h4>
               <div class="download-catalog">
-                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
+                <a href="assets/img/catalogs/pixel-catalog.pdf" target="_blank"><i
+                    class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
                 <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
               </div>
             </div><!-- End Services List -->
@@ -111,51 +115,89 @@
 
           </div>
 
-          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services/pixel-service.jpg" alt="" class="img-fluid services-img">
-            <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="pixel-intro">
 
-              <!-- Default Image / Banner -->
-              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img mb-4">
+  <h3 class="align-items-center justify-content-center">
+    Are you struggling to track your ad performance accurately and missing out on valuable data?
+  </h3>
+  
+  <h4 class="mt-5">How Pixel & Analytics Integration Can Boost Your Business?</h4>
+  
+  <ul>
+    <li><i class="bi bi-check-circle"></i> 
+      <span>Track every important action visitors take on your website</span>
+    </li>
+    <li><i class="bi bi-check-circle"></i> 
+      <span>Measure conversions and understand true campaign ROI</span>
+    </li>
+    <li><i class="bi bi-check-circle"></i> 
+      <span>Build custom & lookalike audiences for powerful retargeting</span>
+    </li>
+    <li><i class="bi bi-check-circle"></i> 
+      <span>Identify profitable user behaviors and improve targeting</span>
+    </li>
+    <li><i class="bi bi-check-circle"></i> 
+      <span>Save budget by optimizing ads with accurate tracking data</span>
+    </li>
+  </ul>
+  
+  <img src="assets/img/services/pixel-service.png" alt="Pixel Service" class="img-fluid services-img">
 
-              <!-- Service Details -->
-              <div class="service-details">
-                <h3>Google Tag Manager</h3>
-                <p>
-                  We provide complete Google Tag Manager setup for seamless event tracking,
-                  conversion optimization, and integration with GA4, Facebook Pixel, and other tools.
-                  Easily manage tags without editing your site’s code.
-                </p>
-
-                <h5>Key Features:</h5>
-                <ul>
-                  <li>Full GTM setup & configuration</li>
-                  <li>Event & conversion tracking</li>
-                  <li>GA4 & Facebook Pixel integration</li>
-                  <li>Debugging & testing support</li>
-                </ul>
-
-                <h5>Why Choose This Service?</h5>
-                <p>
-                  Accurate tracking, faster implementation, and improved ROI through data-driven decisions.
-                </p>
-
-                <!-- Call To Action -->
-                <a href="#contact" class="btn btn-primary mt-3">Get Started</a>
-              </div>
-
-            </div>
+</div>
 
 
-
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="pixel-1">
+            <h3 class="align-items-center justify-content-center">Full GTM Setup & Configuration</h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Complete installation of Google Tag Manager</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Proper container setup for your website</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Custom tags, triggers, and variables configuration</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Standard events integration for tracking</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Optimized GTM setup for scalability</span></li>
+            </ul>
           </div>
+
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="pixel-2">
+            <h3 class="align-items-center justify-content-center">Event & Conversion Tracking</h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Setup for standard & custom events (e.g. purchase,
+                  leads)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Conversion tracking with precision & accuracy</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Track clicks, form submissions, and user actions</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Enhanced eCommerce event tracking (Premium only)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Audience creation from tracked events</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="pixel-3">
+            <h3 class="align-items-center justify-content-center">GA4 & Facebook Pixel Integration</h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Seamless setup of Google Analytics 4 (GA4)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Facebook Pixel installation & configuration</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Server-side tracking implementation (Premium only)</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Cross-platform tracking & audience sync</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Integration with GTM for advanced tracking</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="pixel-4">
+            <h3 class="align-items-center justify-content-center">Debugging & Testing Support</h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Thorough testing of all pixel & event setups</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Debugging issues with GTM, GA4 & Pixel</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Use of Meta Pixel Helper & GA4 DebugView</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Error fixes & troubleshooting support</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Ensuring 100% accurate event tracking</span></li>
+            </ul>
+          </div>
+
+
 
         </div>
 
-
-
       </div>
-
 
     </section><!-- /Service Details Section -->
 
@@ -213,6 +255,59 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Hide all .single-service-details except #pixel-intro on page load
+    window.addEventListener('DOMContentLoaded', function () {
+      var elements = document.querySelectorAll('.single-service-details');
+      elements.forEach(function (element) {
+        if (element.id === 'pixel-intro') {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+
+      // No initial active background for the first service link
+      var serviceLinks = document.querySelectorAll('.services-list a');
+      serviceLinks.forEach(function (link) {
+        link.style.backgroundColor = '';
+        link.style.color = '';
+        var icon = link.querySelector('.bi-arrow-right-circle');
+        if (icon) icon.style.color = '';
+      });
+    });
+
+    function toggleElement(id) {
+      var elements = document.querySelectorAll('.single-service-details');
+      elements.forEach(function (element) {
+        if (element.id === id) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+
+      // Remove bg color and icon color from all service links
+      var serviceLinks = document.querySelectorAll('.services-list a');
+      serviceLinks.forEach(function (link) {
+        link.style.backgroundColor = '';
+        link.style.color = '';
+        var icon = link.querySelector('.bi-arrow-right-circle');
+        if (icon) icon.style.color = '';
+      });
+
+      // Set bg color and icon color for the clicked link
+      var idMap = ['pixel-1', 'pixel-2', 'pixel-3', 'pixel-4', 'pixel-5'];
+      var idx = idMap.indexOf(id);
+      if (idx !== -1 && serviceLinks[idx]) {
+        serviceLinks[idx].style.backgroundColor = '#0563bb';
+        serviceLinks[idx].style.color = '#fff';
+        var icon = serviceLinks[idx].querySelector('.bi-arrow-right-circle');
+        if (icon) icon.style.color = '#fff';
+      }
+    }
+  </script>
 
 </body>
 
