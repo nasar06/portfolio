@@ -84,12 +84,12 @@
             <div class="service-box">
               <h4>Serices List</h4>
               <div class="services-list">
-                <a href="#" onclick="toggleElement('list-0'); return false;"><i
+                <a href="#" onclick="toggleElement('list-1'); return false;"><i
                     class="bi bi-arrow-right-circle"></i><span>Audience Research & Targeting</span></a>
-                <a href="#" onclick="toggleElement('list-1'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Ad content creation</span></a>
-                <a href="#" onclick="toggleElement('list-2'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Retargeting Campaigns</span></a>
-                <a href="#" onclick="toggleElement('list-3'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Budget Optimization</span></a>
-                <a href="#" onclick="toggleElement('list-4'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Weekly Reporting</span></a>
+                <a href="#" onclick="toggleElement('list-2'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Ad content creation</span></a>
+                <a href="#" onclick="toggleElement('list-3'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Retargeting Campaigns</span></a>
+                <a href="#" onclick="toggleElement('list-4'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Budget Optimization</span></a>
+                <a href="#" onclick="toggleElement('list-5'); return false;"><i class="bi bi-arrow-right-circle"></i><span>Weekly Reporting</span></a>
               </div>
             </div><!-- End Services List -->
 
@@ -112,7 +112,7 @@
 
           </div>
 
-          <div class="col-lg-8 ps-lg-5 service-details" data-aos="fade-up" data-aos-delay="200" id="list-0">
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="list-0">
             
             <h3 class="align-items-center justify-content-center">Are you wasting your time, energy, & money showing
               your Facebook ads to the wrong people? </h3>
@@ -129,7 +129,7 @@
             <p>
           </div>
 
-          <div class="col-lg-8 ps-lg-5 service-details" data-aos="fade-up" data-aos-delay="200" id="list-1" >
+          <div class="col-lg-8 ps-lg-5 single-service-details" data-aos="fade-up" data-aos-delay="200" id="list-1" >
             <h3 class="align-items-center justify-content-center">What will I provide if YOU order this meta marketing?
             </h3>
             <ul>
@@ -213,8 +213,8 @@
   <script>
     function toggleElement(id) {
       var el = document.getElementById(id);
-      // Hide all elements with class 'service-details'
-      var elements = document.querySelectorAll('.service-details');
+      // Hide all elements with class 'single-service-details'
+      var elements = document.querySelectorAll('.single-service-details');
       elements.forEach(function (element) {
         if (element.id !== id) {
           element.style.display = 'none';
