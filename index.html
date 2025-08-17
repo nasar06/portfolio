@@ -121,7 +121,8 @@
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>27</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BA/<span style="text-decoration-line: underline;">BSS</span> (Ongoing)</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BA/<span
+                        style="text-decoration-line: underline;">BSS</span> (Ongoing)</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>nasar5847@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
@@ -822,8 +823,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
+            <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -844,7 +844,7 @@
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
+                  <!-- <div class="error-message"></div> -->
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
                   <button type="submit">Send Message</button>
@@ -852,6 +852,59 @@
 
               </div>
             </form>
+
+            <!-- db connection -->
+            <script>
+              document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => {
+                  data[key] = value;
+                });
+                console.log(data);
+              });
+
+              document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => {
+                  data[key] = value;
+                });
+
+                try {
+                  const res = await fetch("http://localhost:5000/api/contact", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                  });
+
+                  const result = await res.json();
+                  console.log(result);
+
+                  if (res.ok) {
+                    alert("Message sent successfully!");
+                    this.reset();
+                  } else {
+                    alert("Something went wrong: " + result.message);
+                  }
+                } catch (err) {
+                  console.error(err);
+                  alert("Server error!");
+                }
+              });
+
+
+
+
+            </script>
+
+
+
           </div><!-- End Contact Form -->
 
         </div>
